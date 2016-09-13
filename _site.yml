@@ -1,7 +1,7 @@
-name: "my-website"
+name: "BASV - biostat2"
 output_dir: "."
 navbar:
-  title: "My Website"
+  title: "biostat2"
   left:
     - text: "Home"
       href: index.html

@@ -1,5 +1,6 @@
 ---
-title: "About This Website"
+title: "Teachers"
 ---
 
-More about this website.
+- Aurélien Ginolhac
+- Eric Koncina
