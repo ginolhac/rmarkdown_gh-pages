@@ -5,5 +5,11 @@ navbar:
   left:
     - text: "Home"
       href: index.html
+    - text: "Lectures"
+      icon: fa-gear
+      menu:
+        - text: "Lecture 1"
+        - text: "---------"
+          href: lecture01_intro.html#(1)
     - text: "About"
       href: about.html

@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Aurélien Ginolhac" />
+  <meta name="date" content="2016-09-19" />
+  <title>Biostat2 - 5th semester</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="site_libs/Slidy2/styles/slidy.css" />
+  <script src="site_libs/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Biostat2 - 5th semester</h1>
+  <h1 class="subtitle">Introduction</h1>
+  <p class="author">
+Aurélien Ginolhac
+  </p>
+  <p class="date">19 september 2016</p>
+</div>
+<div class="slide section level1">
+
+<h2 id="overview">Overview</h2>
+<p>The goal is learn statistics applied to biology using <img src="img/Rlogo_90.png" /></p>
+<p>This course is composed of:</p>
+<ul class="incremental">
+<li>lectures, ~ 30 hours</li>
+<li>practical sessions, ~ 30 hours</li>
+</ul>
+<h2 id="contents">Contents</h2>
+<ul>
+<li>Introduction to programming, basic concepts of algorithm building using R language</li>
+<li>Descriptive statistics with <code>R</code>, examples of large dataset analysis</li>
+<li>Hypotheses and statistical tests, concepts of <code>p-value</code> and confidence intervals</li>
+<li>Data fitting, estimations of goodness of fit</li>
+<li>Linear regression models, dependent / independent variables, least squares method</li>
+<li>Non-parametric tests, Spearman’s rank correlation coefficient</li>
+</ul>
+<h2 id="materials">Materials</h2>
+<h3 id="content-from">Content from:</h3>
+<ul>
+<li>Tatiana Baumuratova</li>
+<li>Jiali Wang</li>
+<li>Charandeep Singh</li>
+<li>Dylan Childs</li>
+<li>Sean Sapcariu</li>
+</ul>
+<h3 id="reading">Reading:</h3>
+<ul>
+<li>Excellent recent ressource about <code>R</code> by <a href="http://egallic.fr/Enseignement/R/m1_stat_eco_logiciel_R.pdf">Ewen Gallic</a></li>
+<li>Recommended book by Michael Crawley</li>
+</ul>
+<blockquote>
+<div class="figure">
+<img src="img/book_crawley.jpg" />
+
+</div>
+</blockquote>
+<h2 id="what-is-r">What is R?</h2>
+<p>“R” is shorthand for <a href="https://www.r-project.org">“GNU R”</a>:</p>
+<ul>
+<li>An interactive programming language</li>
+<li>Focus on data analysis (“stats”) and plotting</li>
+<li><p>“R” is also shorthand for the ecosystem around this language</p>
+<ul>
+<li>Book authors</li>
+<li>Package developers</li>
+<li>Ordinary useRs</li>
+</ul></li>
+</ul>
+<p>Learning to use R will make you <strong>more efficient</strong> and <strong>facilitate the use</strong> of advanced data analysis tools</p>
+<h2 id="why-use-r">Why use R?</h2>
+<ul>
+<li>It’s <em>free!</em></li>
+<li>easy to install / maintain</li>
+<li>easy to process big files and analyse huge amounts of data</li>
+<li>integrated data visualisation tools, <em>even dynamic</em></li>
+<li>fast, and even faster with <em>C++</em> integration via <a href="http://dirk.eddelbuettel.com/code/rcpp/Rcpp-attributes.pdf">Rcpp</a>.</li>
+<li>easy to get help – <a href="https://support.rstudio.com/hc/en-us/articles/200552336-Getting-Help-with-R">huge R community in the web</a>
+<ul>
+<li><a href="http://stackoverflow.com/questions/tagged/r">stackoverflow</a> with a lot of tags like <strong>dplyr</strong>, <strong>ggplot2</strong> etc.</li>
+<li><a href="http://www.r-bloggers.com">rbloggers</a></li>
+<li><a href="https://twitter.com/search?q=%23rstats"><code>#rstats</code></a> on twitter</li>
+</ul></li>
+</ul>
+<blockquote>
+<div class="figure">
+<img src="img/01_r_community.jpg" />
+
+</div>
+</blockquote>
+<h2 id="constant-trend">Constant trend</h2>
+<p><img src="img/r_progression.png" width="85%" /></p>
+<p><a href="http://onlinelibrary.wiley.com/doi/10.1002/ecs2.1394/full">Touchon &amp; McCoy. <em>Ecosphere</em>. 2016</a></p>
+<h2 id="packages">Packages</h2>
+<ul>
+<li>CRAN <em><span class="green2">reliable: package is checked during submit process</span></em></li>
+<li><p><a href="https://github.com/">GitHub</a> using <a href="https://github.com/hadley/devtools">devtools</a>. <em><span class="yellow2">Check <a href="https://github.com/hadley/readr">status</a></span></em></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages(&quot;devtools&quot;)</span>
+devtools::<span class="kw">install_github</span>(<span class="st">&quot;hadley/readr&quot;</span>)</code></pre></div></li>
+<li><p><a href="https://www.bioconductor.org/">bioconductor</a>. <em><span class="yellow2">Check <a href="https://www.bioconductor.org/packages/release/bioc/html/limma.html">status</a></span></em></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">source</span>(<span class="st">&quot;https://bioconductor.org/biocLite.R&quot;</span>)
+<span class="kw">biocLite</span>(<span class="st">&quot;limma&quot;</span>)</code></pre></div></li>
+</ul>
+<div class="centered">
+<p><img src="img/01_packages_install_cran.jpg" /> <img src="img/01_packages_install_devtools.jpg" /></p>
+</div>
+<h2 id="help">Help</h2>
+<p>2 possibilities</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">?log
+<span class="kw">help</span>(log)</code></pre></div>
+<p>In <strong>Rstudio</strong>, the help page can be viewed in the bottom right pane</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">apropos</span>(<span class="st">&quot;log&quot;</span>)</code></pre></div>
+<pre><code>##  [1] &quot;.__C__logical&quot;         &quot;.__C__logLik&quot;         
+##  [3] &quot;.__T__Logic:base&quot;      &quot;as.data.frame.logical&quot;
+##  [5] &quot;as.logical&quot;            &quot;as.logical.factor&quot;    
+##  [7] &quot;col_logical&quot;           &quot;dlogis&quot;               
+##  [9] &quot;is.logical&quot;            &quot;log&quot;                  
+## [11] &quot;log10&quot;                 &quot;log1p&quot;                
+## [13] &quot;log2&quot;                  &quot;logb&quot;                 
+## [15] &quot;Logic&quot;                 &quot;logical&quot;              
+## [17] &quot;logLik&quot;                &quot;loglin&quot;               
+## [19] &quot;parse_logical&quot;         &quot;plogis&quot;               
+## [21] &quot;qlogis&quot;                &quot;read_log&quot;             
+## [23] &quot;rlogis&quot;                &quot;SSlogis&quot;              
+## [25] &quot;tokenizer_log&quot;</code></pre>
+<h2 id="drawback-steep-learning-curve-period-of-much-suckiness">Drawback: Steep learning curve | Period of much suckiness</h2>
+<iframe src="https://www.youtube.com/embed/8SGif63VW6E?start=252&amp;end=292" width="420" height="315" frameborder="0" allowfullscreen=""></iframe>
+<h2 id="tidyverse">Tidyverse</h2>
+<p><strong>R base</strong> is complex, <a href="https://github.com/hadley/tidyverse"><strong>tidyverse</strong></a> is better.</p>
+<p><a href="http://had.co.nz">Hadley Wickham</a> is a chief scientist at <strong>Rstudio</strong> and a developer that creates and maintains the fundamental packages from the <em>tidyverse</em> such as:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;ggplot2&quot;</span>)  <span class="co"># awesome plotting by layers</span>
+<span class="kw">library</span>(<span class="st">&quot;tidyr&quot;</span>)    <span class="co"># shape data correct</span>
+<span class="kw">library</span>(<span class="st">&quot;readr&quot;</span>)    <span class="co"># alternative to read.table</span>
+<span class="kw">library</span>(<span class="st">&quot;dplyr&quot;</span>)    <span class="co"># apply made easy</span>
+<span class="kw">library</span>(<span class="st">&quot;magrittr&quot;</span>) <span class="co"># pipe for R</span></code></pre></div>
+</div>
+<div id="rstudio" class="slide section level1">
+<h1>RStudio</h1>
+<div class="figure">
+<img src="img/01_logo_RStudio.png" />
+
+</div>
+<h2 id="rstudio-what-is-it">Rstudio | What is it?</h2>
+<p><a href="https://www.rstudio.com/products/RStudio/">RStudio</a> is an Integrated Development Environment.<br />
+It makes working with R much easier</p>
+<h3 id="features">Features</h3>
+<ul class="incremental">
+<li><em>Console</em> to run <strong>R</strong>, with syntax highlighter</li>
+<li><em>Editor</em> to work with scripts</li>
+<li><em>Package management</em> (including building)</li>
+<li><em>autocompletion</em> using <kbd>TAB</kbd></li>
+<li>Cheatsheets</li>
+<li>Keyboard shortcuts</li>
+</ul>
+<p>Don’t mix up <strong>R</strong> and <strong>RStudio</strong>.<br />
+<strong>R</strong> needs to be installed first.</p>
+<h2 id="rstudio-the-4-panels-layout">Rstudio | The 4 panels layout</h2>
+<div class="figure">
+<img src="img/01_rstudio_layout.jpg" />
+
+</div>
+<h2 id="getting-started">Getting started</h2>
+<p>Let’s get ready to use <strong>R</strong> and <strong>RStudio</strong>. Do the following:</p>
+<ul>
+<li>Open up RStudio</li>
+<li>Maximise the RStudio window</li>
+<li>Click the Console pane, at the prompt (<code>&gt;</code>) type in <code>3 + 2</code> and hit enter</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span><span class="dv">3</span> +<span class="st"> </span><span class="dv">2</span></code></pre></div>
+<h2 id="arithmetic-operations">Arithmetic operations</h2>
+<p>You will not be surprised that <strong>R</strong> is very good at sums. It has all the arithmetic operators you would expect to see:</p>
+<ul>
+<li><code>+</code>: addition<br />
+</li>
+<li><code>-</code>: subtraction<br />
+</li>
+<li><code>*</code>: multiplication<br />
+</li>
+<li><code>/</code>: division<br />
+</li>
+<li><code>^</code>: exponentiation</li>
+<li><code>%%</code>: modulo</li>
+<li><code>%/%</code>: integer division</li>
+</ul>
+<p><strong>Remember</strong> that <strong>R</strong> will:</p>
+<ul>
+<li>first perform <strong>exponentiation</strong></li>
+<li>then multiplications and/or divisions</li>
+<li>and finally additions and/or subtractions.</li>
+</ul>
+<p>If you need to change the priority during the evaluation, use parentheses – <em>i.e.</em> <code>(</code> and <code>)</code> – to group calculations.</p>
+<h2 id="rstudio-working-directory-and-projects">Rstudio | Working directory and projects</h2>
+<h3 id="working-directory">Working directory</h3>
+<p>It is where <strong>R</strong> is looking for files (read or write).<br />
+Using the console, try:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span><span class="kw">getwd</span>()</code></pre></div>
+<ul>
+<li>It is possible to change the location using <code>setwd()</code> (in the console or interactively in <em>RStudio</em>)</li>
+<li>A better way is to use projects in Rstudio</li>
+</ul>
+<h3 id="projects">Projects</h3>
+<p>They solve most issues with working directories: get rid of <code>setwd()</code></p>
+<div class="centered">
+<div class="figure">
+<img src="img/01_rstudio_project.jpg" />
+
+</div>
+</div>
+</div>
+<div id="data-types-and-structures" class="slide section level1">
+<h1>Data types and structures</h1>
+<h2 id="main-types">4 main types</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>numeric</td>
+<td>integer (2), double (2.34)</td>
+</tr>
+<tr class="even">
+<td>string</td>
+<td>“biostat !”</td>
+</tr>
+<tr class="odd">
+<td>boolean</td>
+<td>TRUE / FALSE</td>
+</tr>
+<tr class="even">
+<td>complex</td>
+<td>2+0i</td>
+</tr>
+</tbody>
+</table>
+<h3 id="special-case">Special case</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="ot">NA</span>   <span class="co"># not available, missing data</span>
+<span class="ot">NULL</span> <span class="co"># empty</span></code></pre></div>
+<h2 id="structures">Structures</h2>
+<ul class="incremental">
+<li>Vectors</li>
+<li>Factors</li>
+<li>Matrix (2n), Arrays (3+n)</li>
+<li>Lists</li>
+<li>Data frames</li>
+</ul>
+<h2 id="data-types-2">Data types 2</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># evaluate</span>
+<span class="kw">typeof</span>(<span class="dv">2</span>)</code></pre></div>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># check</span>
+<span class="kw">is.integer</span>(<span class="fl">2.34</span>)</code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># convert</span>
+<span class="kw">as.integer</span>(<span class="fl">2.34</span>)</code></pre></div>
+<pre><code>## [1] 2</code></pre>
+<h2 id="vectors">Vectors</h2>
+<p><strong>Vectors</strong> are the simplest type of “object” in R.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">print</span>(<span class="dv">5</span>)</code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<p><strong>[1]</strong> means we made a numeric vector of length 1. Now look at what the <strong><code>:</code></strong> operator does:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span>:<span class="dv">30</span></code></pre></div>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+## [24] 24 25 26 27 28 29 30</code></pre>
+<p>How many elements are in the thing we made here? What does the <strong>[24]</strong> signify?</p>
+<!-- ---- splitting does not work with smaller: true -->
+<h2 id="section"></h2>
+<p>Think of vectors as collections of simple things (like numbers) that are ordered. We can create vectors from other vectors using the <strong><code>c</code></strong> function:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(<span class="dv">2</span>, <span class="ot">TRUE</span>, <span class="st">&quot;a string&quot;</span>)</code></pre></div>
+<pre><code>## [1] &quot;2&quot;        &quot;TRUE&quot;     &quot;a string&quot;</code></pre>
+<p>We can use the assignment operator to associate a name to our vectors in order to reuse them:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">myvec &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">1</span>:<span class="dv">3</span>)
+myvec</code></pre></div>
+<pre><code>## [1] 3 4 1 2 3</code></pre>
+<h2 id="section-1"></h2>
+<p>The following will build a character vector. We know this because the elements are all in quotes.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">char.vec &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;dog&quot;</span>, <span class="st">&quot;cat&quot;</span>, <span class="st">&quot;ape&quot;</span>)</code></pre></div>
+<p>Now use the <strong><code>c</code></strong> function to combine a length-one vector number of the number <code>4</code> with the <code>char.vec</code>. What happens?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(<span class="dv">4</span>, char.vec)</code></pre></div>
+<pre><code>## [1] &quot;4&quot;   &quot;dog&quot; &quot;cat&quot; &quot;ape&quot;</code></pre>
+<p>Notice that the 4 is quoted. R turned it into a character vector and then combined it with char.vec. All the elements in a vector must be of the same type.</p>
+<h2 id="section-2"></h2>
+<p>R has a few built in vectors. One of these is <code>LETTERS</code>. What does it contain?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">LETTERS</code></pre></div>
+<pre><code>##  [1] &quot;A&quot; &quot;B&quot; &quot;C&quot; &quot;D&quot; &quot;E&quot; &quot;F&quot; &quot;G&quot; &quot;H&quot; &quot;I&quot; &quot;J&quot; &quot;K&quot; &quot;L&quot; &quot;M&quot; &quot;N&quot; &quot;O&quot; &quot;P&quot; &quot;Q&quot;
+## [18] &quot;R&quot; &quot;S&quot; &quot;T&quot; &quot;U&quot; &quot;V&quot; &quot;W&quot; &quot;X&quot; &quot;Y&quot; &quot;Z&quot;</code></pre>
+<p>How do extract the first element from this (the letter A). Here is how to do it:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">LETTERS[<span class="dv">1</span>]</code></pre></div>
+<pre><code>## [1] &quot;A&quot;</code></pre>
+<p>Use the square brakets to subset vectors</p>
+<h2 id="section-3"></h2>
+<p>What do we do if we need more than one element? Here is how to get elements in position 3 through to 10:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">LETTERS[<span class="dv">3</span>:<span class="dv">10</span>]</code></pre></div>
+<pre><code>## [1] &quot;C&quot; &quot;D&quot; &quot;E&quot; &quot;F&quot; &quot;G&quot; &quot;H&quot; &quot;I&quot; &quot;J&quot;</code></pre>
+<p>Remember what the : operator does? Take a look:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">3</span>:<span class="dv">10</span></code></pre></div>
+<pre><code>## [1]  3  4  5  6  7  8  9 10</code></pre>
+<p>Can you see how <code>LETTERS[3:10]</code> works now?</p>
+<h2 id="section-4"></h2>
+<p>Exercise</p>
+<ul>
+<li>find a way to output the following</li>
+</ul>
+<pre><code>## [1] &quot;B&quot; &quot;C&quot; &quot;D&quot; &quot;E&quot;</code></pre>
+<ul>
+<li>find a way to output the following</li>
+</ul>
+<pre><code>## [1] &quot;B&quot; &quot;C&quot; &quot;D&quot; &quot;E&quot; &quot;G&quot;</code></pre>
+<ul>
+<li>find a way to output first 5 letters + one to the last</li>
+</ul>
+<pre><code>## [1] &quot;A&quot; &quot;B&quot; &quot;C&quot; &quot;D&quot; &quot;E&quot; &quot;Y&quot;</code></pre>
+<h2 id="section-5"></h2>
+<p>Solution</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">LETTERS[<span class="dv">2</span>:<span class="dv">5</span>]</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">LETTERS[<span class="kw">c</span>(<span class="dv">2</span>:<span class="dv">5</span>, <span class="dv">7</span>)]</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">LETTERS[<span class="kw">c</span>(<span class="dv">1</span>:<span class="dv">5</span>, <span class="kw">length</span>(LETTERS) -<span class="st"> </span><span class="dv">1</span>)]</code></pre></div>
+<pre><code>## [1] &quot;A&quot; &quot;B&quot; &quot;C&quot; &quot;D&quot; &quot;E&quot; &quot;Y&quot;</code></pre>
+<h2 id="vectorized-operation">Vectorized operation</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">myvec &lt;-<span class="st"> </span><span class="dv">10</span>:<span class="dv">20</span>
+myvec +<span class="st"> </span><span class="dv">2</span></code></pre></div>
+<pre><code>##  [1] 12 13 14 15 16 17 18 19 20 21 22</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">myvec *<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>:<span class="dv">3</span>)</code></pre></div>
+<pre><code>## Warning in myvec * c(1:3): longer object length is not a multiple of
+## shorter object length</code></pre>
+<pre><code>##  [1] 10 22 36 13 28 45 16 34 54 19 40</code></pre>
+<p>Mind that <strong>R</strong> recycles when vectors are too short</p>
+<h2 id="factors">Factors</h2>
+<p>Vectors with qualitative data</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">factor</span>(<span class="kw">c</span>(<span class="st">&quot;cytoplasm&quot;</span>, <span class="st">&quot;nucleus&quot;</span>, <span class="st">&quot;extracellular&quot;</span>, <span class="st">&quot;nucleus&quot;</span>, <span class="st">&quot;nucleus&quot;</span>))</code></pre></div>
+<pre><code>## [1] cytoplasm     nucleus       extracellular nucleus       nucleus      
+## Levels: cytoplasm extracellular nucleus</code></pre>
+<h2 id="matrix">Matrix</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">M &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span>:<span class="dv">6</span>, <span class="dt">ncol =</span> <span class="dv">2</span>, <span class="dt">nrow =</span> <span class="dv">3</span>)
+M</code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,]    1    4
+## [2,]    2    5
+## [3,]    3    6</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">M &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span>:<span class="dv">6</span>, <span class="dt">ncol =</span> <span class="dv">2</span>, <span class="dt">nrow =</span> <span class="dv">3</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>)
+M</code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,]    1    2
+## [2,]    3    4
+## [3,]    5    6</code></pre>
+<h2 id="array">Array</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">A &lt;-<span class="st"> </span><span class="kw">array</span>(<span class="dv">1</span>:<span class="dv">12</span>, <span class="dt">dim =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">3</span>))
+A</code></pre></div>
+<pre><code>## , , 1
+## 
+##      [,1] [,2] [,3] [,4]
+## [1,]    1    2    3    4
+## 
+## , , 2
+## 
+##      [,1] [,2] [,3] [,4]
+## [1,]    5    6    7    8
+## 
+## , , 3
+## 
+##      [,1] [,2] [,3] [,4]
+## [1,]    9   10   11   12</code></pre>
+<h2 id="lists">Lists</h2>
+<p>Most permissive type. Could be anything!</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">list</span>(<span class="dt">name =</span> <span class="st">&quot;Farina&quot;</span>, <span class="dt">firstname =</span> <span class="st">&quot;Geoff&quot;</span>, <span class="dt">year =</span> <span class="dv">1995</span>)</code></pre></div>
+<pre><code>## $name
+## [1] &quot;Farina&quot;
+## 
+## $firstname
+## [1] &quot;Geoff&quot;
+## 
+## $year
+## [1] 1995</code></pre>
+<h2 id="data-frame">Data frame</h2>
+<p>Most important type to recall. <code>ggplot2</code> and <code>dplyr</code> focus on those.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">women</code></pre></div>
+<pre><code>##    height weight
+## 1      58    115
+## 2      59    117
+## 3      60    120
+## 4      61    123
+## 5      62    126
+## 6      63    129
+## 7      64    132
+## 8      65    135
+## 9      66    139
+## 10     67    142
+## 11     68    146
+## 12     69    150
+## 13     70    154
+## 14     71    159
+## 15     72    164</code></pre>
+<h2 id="section-6"></h2>
+<p>The function <code>as.data.frame()</code> allows to convert a matrix / list into a <code>data.frame</code>.<br />
+A data frale can be considered as a collection of vectors having the <strong>same length</strong>.</p>
+<p>We can extract a vector from a data frame in a few different ways:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Using the name and the $ operator</span>
+women$height</code></pre></div>
+<pre><code>##  [1] 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># using [[]], name in quotes or indices</span>
+women[[<span class="st">&quot;height&quot;</span>]]</code></pre></div>
+<pre><code>##  [1] 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72</code></pre>
+<h2 id="section-7"></h2>
+<p>Could be used as a table, specify a cell by <code>row</code>, <code>column</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(women, <span class="dv">5</span>)</code></pre></div>
+<pre><code>##   height weight
+## 1     58    115
+## 2     59    117
+## 3     60    120
+## 4     61    123
+## 5     62    126</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">women[<span class="dv">4</span>, <span class="dv">2</span>]</code></pre></div>
+<pre><code>## [1] 123</code></pre>
+<h2 id="reading-data-13">Reading data | 1/3</h2>
+<p>Independent from <code>Rstudio</code>.</p>
+<p>Simulate a file by writing down <code>women</code> data</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">write.table</span>(women, <span class="dt">file =</span> <span class="st">&quot;women.tsv&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, <span class="dt">row.name =</span> <span class="ot">FALSE</span>, <span class="dt">quote =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<p>Loading it</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;women.tsv&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, <span class="dt">header =</span> <span class="ot">TRUE</span>)
+<span class="kw">head</span>(df, <span class="dv">3</span>)</code></pre></div>
+<pre><code>##   height weight
+## 1     58    115
+## 2     59    117
+## 3     60    120</code></pre>
+<h2 id="hadleys-version">Hadley’s version</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;readr&quot;</span>, <span class="dt">dep =</span> <span class="ot">TRUE</span>, <span class="dt">repos=</span><span class="st">&#39;http://cran.us.r-project.org&#39;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;readr&quot;</span>)
+df &lt;-<span class="st"> </span><span class="kw">read_tsv</span>(<span class="st">&quot;women.tsv&quot;</span>, <span class="dt">col_names =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<pre><code>## Parsed with column specification:
+## cols(
+##   height = col_integer(),
+##   weight = col_integer()
+## )</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df</code></pre></div>
+<pre><code>## # A tibble: 15 × 2
+##    height weight
+##     &lt;int&gt;  &lt;int&gt;
+## 1      58    115
+## 2      59    117
+## 3      60    120
+## 4      61    123
+## 5      62    126
+## 6      63    129
+## 7      64    132
+## 8      65    135
+## 9      66    139
+## 10     67    142
+## 11     68    146
+## 12     69    150
+## 13     70    154
+## 14     71    159
+## 15     72    164</code></pre>
+<h2 id="reading-data-23">Reading data | 2/3</h2>
+<p>Using <code>Rstudio</code>, right bottom panel. Select the <strong>folder</strong></p>
+<div class="figure">
+<img src="img/rstudio_explorer.png" />
+
+</div>
+<h2 id="reading-data-23-1">Reading data | 2/3</h2>
+<p>When the <strong>folder</strong> is selected and its content displayed, tell <code>R</code> to use this location (alternative to <code>setwd(/path/to/location)</code>). Press the <code>More</code> menu and click on</p>
+<p><code>Set As Working Directory</code></p>
+<div class="figure">
+<img src="img/rstudio_setwd.png" />
+
+</div>
+<h2 id="reading-data-33">Reading data | 3/3</h2>
+<p>Using <code>Rstudio</code>, right top panel. Select directly your <strong>file</strong></p>
+<div class="figure">
+<img src="img/rstudio_import.png" />
+
+</div>
+<h2 id="style">Style</h2>
+<p><code>R</code> is rather flexible and permissive with its syntax. However, being more strict tends to ease the debugging process.</p>
+<p>See <a href="http://adv-r.had.co.nz/Style.html">Hadley’s recommendations</a></p>
+<p>Basically - use <strong>spaces</strong> - use more <strong>lines</strong> - <code>}</code> alone on their line except for</p>
+<pre><code>```r
+} else {
+```
+- using the pipe `%&gt;%` for one instruction per line
+- break list definition, function arguments ...</code></pre>
+<h2 id="hadleys-pepper">Hadley’s pepper</h2>
+<p><img src="img/hadley_pepper.png" /> <img src="img/hadley_pepper2.png" /></p>
+</div>
+
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+</body>
+</html>
