@@ -2,5 +2,7 @@
 title: "Teachers"
 ---
 
-- Aurélien Ginolhac
-- Eric Koncina
+We are both working at the [Life Sciences Research Unit](http://wwwen.uni.lu/recherche/fstc/life_sciences_research_unit)
+
+- [Aurélien Ginolhac](http://wwwen.uni.lu/recherche/fstc/life_sciences_research_unit/people/aurelien_ginolhac)
+- [Eric Koncina](http://wwwen.uni.lu/recherche/fstc/life_sciences_research_unit/research_areas/neuro_inflammation/people/eric_koncina)

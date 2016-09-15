@@ -1,5 +1,31 @@
 ---
-title: "Lectures"
+title: ""
 ---
 
-Hello, students
+## Introduction
+
+- Give students and introduction to the programming language for statistical computations - R;
+
+- Bridge previously obtained theoretical knowledge in the field of Statistics with practical applications to biological data;
+
+- Provide strong practical skills in the analysis of large-scale data sets with R.
+
+## Description
+
+The course will be structured as computer practical's and will cover the following issues :
+
+- Introduction to programming, basic concepts of algorithm building, R language
+
+- Descriptive statistics with R, examples of large dataset analysis
+
+- Hypotheses and statistical tests, concepts of P-value and confidence intervals
+
+- Data fitting, estimations of goodness of fit
+
+- Linear regression models, dependent and independent variables, least squares method
+
+- Non-parametric tests, Spearman's rank correlation coefficient
+
+## Learning Outcomes
+
+Students' ability to apply statistical methods to analyze the real-life data, including advance statistical tests.
