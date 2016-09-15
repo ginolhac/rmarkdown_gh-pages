@@ -1,0 +1,9 @@
+ioslides_presentation:
+  css: ../css/slides.css
+  fig_height: 5
+  fig_width: 6
+  keep_md: no
+  logo: img/uni.png
+  smaller: yes
+  include:
+    after_body: slide_footer.html

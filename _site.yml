@@ -9,7 +9,7 @@ navbar:
       icon: fa-graduation-cap
       menu:
         - text: "Lecture 1"
-          href: lecture01_intro.html
+          href: lectures/lecture01_intro.html
         - text: "---------"
     - text: "Practicals"
       icon: fa-desktop
@@ -27,4 +27,4 @@ output:
     highlight: textmate
     include:
       after_body: footer.html
-
+    css: css/site.css
