@@ -4,26 +4,30 @@ title: ""
 
 ## Introduction
 
-- Give students and introduction to the programming language for statistical computations - R;
+- Give students and introduction to the programming language for statistical computations - R
+- Bridge previously obtained theoretical knowledge in the field of Statistics
+with practical applications to biological data
+- Provide strong practical skills in the analysis of large-scale data sets with R
 
-- Bridge previously obtained theoretical knowledge in the field of Statistics with practical applications to biological data;
+### Tidyverse
 
-- Provide strong practical skills in the analysis of large-scale data sets with R.
+Replace _R_ base functions by the [tidyverse](tidyverse) which is now an official [CRAN package](https://cran.r-project.org/package=tidyverse). 
+Adopt [Hadley Wickham](http://hadley.nz/) philosophy, take each step of data science and simplify the tools. 
+Keeping what make them helpful and removing inconsistent and historic behaviors.
+
+Summary in one picture, by [David Robinson](http://varianceexplained.org/)
+
+![](https://raw.githubusercontent.com/LSRU/r_workshop/gh-pages/img/drob_r_pipeline_600.jpg)
 
 ## Description
 
-The course will be structured as computer practical's and will cover the following issues :
+The course will be structured around computer practical's and will cover the following issues :
 
 - Introduction to programming, basic concepts of algorithm building, R language
-
 - Descriptive statistics with R, examples of large dataset analysis
-
 - Hypotheses and statistical tests, concepts of P-value and confidence intervals
-
 - Data fitting, estimations of goodness of fit
-
 - Linear regression models, dependent and independent variables, least squares method
-
 - Non-parametric tests, Spearman's rank correlation coefficient
 
 ## Learning Outcomes

@@ -15,7 +15,7 @@ navbar:
       icon: fa-desktop
       menu:
         - text: "TD 1"
-          href: lecture01_intro.html
+          href: lectures/lecture01_intro.html
         - text: "---------"
   right:
     - text: "About"
@@ -27,4 +27,4 @@ output:
     highlight: textmate
     include:
       after_body: footer.html
-    css: style.css
+
