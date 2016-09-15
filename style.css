@@ -1,0 +1,210 @@
+/* Adjusting logo */
+.gdbar img {
+  width: 150px !important;
+  height: 150px !important;
+  margin: 8px 8px;
+}
+
+.gdbar {
+  width: 400px !important;
+  height: 170px !important;
+}
+
+
+/* unordered list styles 
+ ul  {
+    font-size: 50px;
+    list-style-type: square;
+}*/
+
+slides > slide:not(.nobackground):before {
+  width: 50px;
+  height: 50px;
+  background-size: 50px 50px;
+}
+
+/* Headers */
+h1{
+  font-size: 20pt;
+}
+
+h2{
+  font-size: 30px;
+  line-height: 25px;
+}
+
+.codefont pre {
+    font-size: 11px;
+    line-height: 9px;
+}
+
+
+.wrapper {
+  text-align: center;
+}
+
+blockquote {
+  margin: 0 auto;
+  max-width: 400px;
+  position: relative;
+  /* Added */
+}
+blockquote::after,
+blockquote::before {
+  color: green;
+  font-size: 8rem;
+  line-height: 0.8;
+}
+blockquote::after {
+  content: close-quote;
+  vertical-align: bottom;
+  /* Added */
+    position: absolute;
+  right: -15%;
+  bottom: -60px;
+}
+blockquote::before {
+  content: open-quote;
+  vertical-align: top;
+  /* Added */
+    position: absolute;
+  left: -20%;
+}
+/*
+p {
+  font-size: 1.25rem;
+  font-style: italic;
+  text-align: left;
+}*/
+@media (max-width: 600px) {
+  blockquote::after {
+    bottom: unset;
+    right: 0;
+  }
+  blockquote::before {
+    left: 0;
+  }
+  blockquote p {
+    padding-top: 55px;
+  }
+}
+
+/* Style for keyboard keys */
+/* From http://meta.superuser.com/questions/4788/css-for-the-new-kbd-style */
+kbd
+{
+    -moz-border-radius:3px;
+    -moz-box-shadow:0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+    -webkit-border-radius:3px;
+    -webkit-box-shadow:0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+    background-color:#f7f7f7;
+    border:1px solid #ccc;
+    border-radius:3px;
+    box-shadow:0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+    color:#333;
+    display:inline-block;
+    font-family:Arial,Helvetica,sans-serif;
+    /*font-size:11px;*/
+    line-height:1.4;
+    margin:0 .1em;
+    padding:.1em .6em;
+    text-shadow:0 1px 0 #fff;
+}
+
+li{list-style-type:none;}
+ul li:before{
+  padding-left: 0.7em;
+  content:'\00b7';
+  /*content:'\00b7';*/ /*dot*/
+  /*content:'\25b6';*/ /*triangle right*/
+  /*content:'\2666';*/ /*diams*/
+  font-size: 50px;
+  margin-top: -3px;
+  /*line-height:28px;
+  vertical-align:middle;*/
+}
+
+/* Trying to optimize code blocks in a two columns mode
+   Needs still to be enhanced: preview pane renders not the same as mozilla firefox*/
+slide .columns-2 pre.prettyprint.lang-r {
+  width: 110%;
+  padding: 10px 0px 10px 10px;
+  left: -10px;
+}
+
+.rightfloat {
+  position: relative;
+  float: right;
+  z-index: 999;
+}
+
+div.rightfloat img {
+  display: flex;
+}
+
+div.left {
+	width: 45%;
+	float: left;
+}
+
+div.right {
+	width: 45%;
+	float: right;
+}
+
+slides > slide > hgroup > h3 {
+  float: right;
+  font-style: italic;
+  top: -30px;
+  line-height:1.5;
+  position: relative;
+}
+
+slides > slide > hgroup + article {
+  margin-top: 25px;
+}
+
+slides > slide {
+  color: black;
+}
+
+code {
+  color: #c7254e;
+  white-space: pre;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-color: black;
+}
+
+div.box {
+  
+  border:2px solid gray;
+  border-radius: 4px;
+  padding: 5px;
+  margin: 10px 0 10px 0;
+}
+
+div.box > p {
+  margin-bottom: 0;
+}
+
+div.box > p > img {
+  vertical-align: middle; /* Aligns pictures in a box with text (middle)*/
+}
+
+/* Background colors for the boxes */
+/* red, green are already defined by ioslides for font-colors */
+
+.red-bg {
+  background-color: #F08080;  
+}
+.green-bg {
+  background-color: #90EE90;  
+}
+
+.exercise {
+  background-color: #e6ffe6; 
+  width: 100%;
+  height: 85%;
+  border-radius: 5px;
+  padding: 10px;
+}
