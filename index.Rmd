@@ -4,20 +4,22 @@ title: ""
 
 ## Introduction
 
-- Give students and introduction to the programming language for statistical computations - R
+- Give students and introduction to the programming language for statistical computations - [_R_](https://cran.r-project.org/)
 - Bridge previously obtained theoretical knowledge in the field of Statistics
 with practical applications to biological data
-- Provide strong practical skills in the analysis of large-scale data sets with R
+- Provide strong practical skills in the analysis of large-scale data sets with _R_
 
 ### Tidyverse
 
 Replace _R_ base functions by the [tidyverse](tidyverse) which is now an official [CRAN package](https://cran.r-project.org/package=tidyverse). 
 Adopt [Hadley Wickham](http://hadley.nz/) philosophy, take each step of data science and simplify the tools. 
 Keeping what make them helpful and removing inconsistent and historic behaviors.
+His proposed workflow is described as follow in his must-read book [_R_ for data science](http://r4ds.had.co.nz/)
 
-Summary in one picture, by [David Robinson](http://varianceexplained.org/)
+![](https://raw.githubusercontent.com/LSRU/r_workshop/gh-pages/img/data-science-explore.png)
 
-![](https://raw.githubusercontent.com/LSRU/r_workshop/gh-pages/img/drob_r_pipeline_600.jpg)
+H. Wickham - [_R_ for data science](http://r4ds.had.co.nz/introduction-1.html), [licence CC](http://creativecommons.org/licenses/by-nc-nd/3.0/us/)
+
 
 ## Description
 
@@ -25,7 +27,7 @@ The course will be structured around computer practical's and will cover the fol
 
 - Introduction to programming
     + basic concepts of algorithm building
-    + R language
+    + _R_ language
     + functional programming
 - Descriptive statistics with R
     + variance, mean, median and ditribution descriptors
@@ -56,9 +58,7 @@ including advance statistical tests.
 
 Beyond biostatistics _per se_, the final aim is to provide a methodology and framework to work as 
 a **data scientist**. This encompasses everything from importing raw data to final communication
-as described below by Hadley Wickham in his must-read book [R for data science](http://r4ds.had.co.nz/)
+as described by Hadley Wickham. In terms of _R_ packages, the workflow is nicely depicted as in this
+picture, by [David Robinson](http://varianceexplained.org/)
 
-
-![](https://raw.githubusercontent.com/LSRU/r_workshop/gh-pages/img/data-science-explore.png)
-
-H. Wickham - [R for data science](http://r4ds.had.co.nz/introduction-1.html), [licence CC](http://creativecommons.org/licenses/by-nc-nd/3.0/us/)
+![](https://raw.githubusercontent.com/LSRU/r_workshop/gh-pages/img/drob_r_pipeline_600.jpg)
