@@ -1,0 +1,34 @@
+---
+title: ""
+---
+
+## Description
+
+The course will be structured around computer practical's and will cover the following issues :
+
+- Introduction to programming
+    + basic concepts of algorithm building
+    + _R_ language
+    + focus on the IDE [Rstudio]()
+    + functional programming
+- Descriptive statistics with R
+    + variance, mean, median and ditribution descriptors
+    + Central Tendency
+- Hypotheses testing
+    + concepts of _p-value_ and confidence intervals
+    + correction for multiple testing
+    + one sample
+    + two samples
+- Correlation
+    + parametric
+    + non-parametric tests
+- Regression models
+    + linear models, least squares method
+    + generalized linear model (GLMs)
+    + non linear models
+    + multiple regression
+- Analysis of variance, ANOVA
+    + one-way
+    + two-ways
+- Count data
+    + contingency tables

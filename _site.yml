@@ -4,7 +4,10 @@ navbar:
   title: "biostat2"
   left:
     - text: "Home"
+      icon: fa-bar-chart
       href: index.html
+    - text: "Details"
+      href: details.html
     - text: "Lectures"
       icon: fa-graduation-cap
       menu:
