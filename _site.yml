@@ -20,6 +20,8 @@ navbar:
         - text: "TD 1"
           href: lectures/lecture01_intro.html
         - text: "---------"
+    - text: "Exams"
+      href: exam.html
   right:
     - text: "About"
       icon: fa-question fa-lg

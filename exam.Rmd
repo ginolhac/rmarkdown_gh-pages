@@ -1,0 +1,19 @@
+---
+title: ""
+---
+
+## Exams
+
+### Lectures (4 ECTS)
+
+- 2 hours
+- on paper sheets
+- **no** documents nor Internet access allowed
+- printed cheatsheet (_R_, _tidyverse_) will be provided
+
+### Practical (3 ECTS)
+
+- 2 hours
+- hands-on
+- Internet access allowed 
+- all documents allowed
