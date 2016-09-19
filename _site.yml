@@ -1,12 +1,10 @@
 name: "BASV - biostat2"
 output_dir: "."
 navbar:
-  title: "biostat2"
+  title: "Biostat2"
   left:
-    - text: "Home"
-      icon: fa-bar-chart
-      href: index.html
     - text: "Details"
+      icon: fa-bar-chart
       href: details.html
     - text: "Lectures"
       icon: fa-graduation-cap
