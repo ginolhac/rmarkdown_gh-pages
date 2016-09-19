@@ -23,13 +23,42 @@ Summary in one picture, by [David Robinson](http://varianceexplained.org/)
 
 The course will be structured around computer practical's and will cover the following issues :
 
-- Introduction to programming, basic concepts of algorithm building, R language
-- Descriptive statistics with R, examples of large dataset analysis
-- Hypotheses and statistical tests, concepts of P-value and confidence intervals
-- Data fitting, estimations of goodness of fit
-- Linear regression models, dependent and independent variables, least squares method
-- Non-parametric tests, Spearman's rank correlation coefficient
-
+- Introduction to programming
+    + basic concepts of algorithm building
+    + R language
+    + functional programming
+- Descriptive statistics with R
+    + variance, mean, median and ditribution descriptors
+    + Central Tendency
+- Hypotheses testing
+    + concepts of _p-value_ and confidence intervals
+    + correction for multiple testing
+    + one sample
+    + two samples
+- Correlation
+    + parametric
+    + non-parametric tests
+- Regression models
+    + linear models, least squares method
+    + generalized linear model (GLMs)
+    + non linear models
+    + multiple regression
+- Analysis of variance, ANOVA
+    + one-way
+    + two-ways
+- Count data
+    + contingency tables
+    
 ## Learning Outcomes
 
-Students' ability to apply statistical methods to analyze the real-life data, including advance statistical tests.
+Students' ability to apply statistical methods to analyze the real-life data,
+including advance statistical tests.
+
+Beyond biostatistics _per se_, the final aim is to provide a methodology and framework to work as 
+a **data scientist**. This encompasses everything from importing raw data to final communication
+as described below by Hadley Wickham in his must-read book [R for data science](http://r4ds.had.co.nz/)
+
+
+![](https://raw.githubusercontent.com/LSRU/r_workshop/gh-pages/img/data-science-explore.png)
+
+H. Wickham - [R for data science](http://r4ds.had.co.nz/introduction-1.html), [licence CC](http://creativecommons.org/licenses/by-nc-nd/3.0/us/)
